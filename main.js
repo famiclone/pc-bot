@@ -54,8 +54,8 @@ function setOnline() {
     state.online = true;
     state.waiting = false;
     bot.sendMessage(
-      process.env.CHANNEL_ID,
-      ONLINE_MESSAGE,
+      env.CHANNEL_ID,
+      env.ONLINE_MESSAGE,
       { parse_mode: "HTML" },
       (err) => {
         if (err) {
@@ -75,8 +75,8 @@ function setOffline() {
     console.log("Client is offline");
 
     bot.sendMessage(
-      process.env.CHANNEL_ID,
-      OFFLINE_MESSAGE,
+      env.CHANNEL_ID,
+      env.OFFLINE_MESSAGE,
       { parse_mode: "HTML" },
       (err) => {
         if (err) {
