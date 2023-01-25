@@ -1,0 +1,17 @@
+{
+  "name": "client",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node main.js",
+    "dev": "export $(cat .env | xargs) node main.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^3.3.0",
+    "node-telegram-bot-api": "^0.61.0"
+  }
+}
