@@ -44,8 +44,10 @@ http
     console.log(`Server is listening on port ${env.PORT}`);
   })
   .on("request", (req, res) => {
-    setOnline();
-    res.end();
+    if (req.headers["auth-token"] === env.AUTH_TOKEN) {
+      setOnline();
+      res.end();
+    }
   });
 
 function setOnline() {

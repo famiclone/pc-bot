@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node main.js",
-    "dev": "export $(cat .env | xargs) node main.js"
+    "dev": "export $(cat .env | xargs) && node main.js"
   },
   "author": "",
   "license": "ISC",
