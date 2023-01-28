@@ -90,7 +90,7 @@ function setOffline() {
 }
 
 setInterval(() => {
-  if (state.lastOnline + env.INTERVAL < Date.now()) {
+  if (state.lastOnline + parseInt(env.INTERVAL) < Date.now()) {
     setOffline();
   }
 }, env.INTERVAL);
